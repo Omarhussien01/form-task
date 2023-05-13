@@ -7,6 +7,11 @@
     <title>Form</title>
 </head>
 <style>
+  form  { display: table; width: 75%;     }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+ 
   body{
     background-color: #D6E8DB;
   }
@@ -26,51 +31,64 @@
 .butt:hover {
    background-color: #99A98F;
    color:white;
+
+   .container {
+  width: 500px;
+  clear: both;
+}
+
 }
 </style>
 <body>
-    
-<form action="/action_page.php">
- <fieldset>
-  <legend>Personal Information</legend><br>
-  <fieldset>
-    <legend> Your Name</legend>
-    <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" placeholder="ex. Omar"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname" placeholder="ex. Metwally"><br><br>
-  </fieldset>
-  <br>
-  <label for="phoneNo">Phone Number:</label>
-  <input type="tel" id="phoneNo" name="phoneNo" ><br><br>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" ><br><br>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" "><br><br>
-  <label for="rePassword">Re-password:</label>
-  <input type="password" id="rePassword" name="rePassword" ><br><br>
-   <input type="radio" id="male" name="gender" value="male">
-   <label for="male">Male</label><br>
-   <input type="radio" id="female" name="gender" value="female">
-   <label for="female">Female</label><br><br>
-   <input type="checkbox" id="student" name="student" value="student">
-    <label for="student">Student</label><br>
-    <input type="checkbox" id="grad" name="grad" value="grad">
-    <label for="grad">Graduate</label><br><br>
+   
+      <form action="/action_page.php">
+        <fieldset>
+         <legend>Personal Information</legend><br>
+         <fieldset>
+           <legend> Your Name</legend>
+           <label for="fname">First name:</label>
+         <input type="text" id="fname" name="fname" placeholder="ex. Omar"><br><br>
+         <label for="lname">Last name:</label>
+         <input type="text" id="lname" name="lname" placeholder="ex. Metwally"><br><br>
+         </fieldset>
+         <br>
+         <p><label for="phoneNo">Phone Number:</label>
+          <input type="tel" id="phoneNo" name="phoneNo" ><br><br></p>
+         <p>
+          <label for="email">Email:</label>
+         <input type="email" id="email" name="email" ><br><br>
+         </p>
+         <p><label for="password">Password:</label>
+          <input type="password" id="password" name="password"><br><br></p>
+          <p><label for="rePassword">Re-password:</label>
+            <input type="password" id="rePassword" name="rePassword" ><br><br></p>
+         
+         
+          <input type="radio" id="male" name="gender" value="male">
+          <label style="display: inline;" for="male">Male</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label style="display: inline;" for="female">Female</label><br><br>
+          <input type="checkbox" id="student" name="student" value="student">
+           <label style="display: inline;"  for="student">Student</label><br>
+           <input type="checkbox" id="grad" name="grad" value="grad">
+           <label style="display: inline;"  for="grad">Graduate</label><br><br>
+       
+           <label style="display: inline;"  for="uni">University:</label>
+       
+       <select name="uni" id="uni">
+         <option value="auc">AUC</option>
+         <option value="guc">GUC</option>
+         <option value="bue">BUE</option>
+         <option value="miu">MIU</option>
+       </select><br><br>
+       
+         
+         <input type="submit" value="Submit"  class="butt">
+        </fieldset>
+       </form>
 
-    <label for="uni">University:</label>
 
-<select name="uni" id="uni">
-  <option value="auc">AUC</option>
-  <option value="guc">GUC</option>
-  <option value="bue">BUE</option>
-  <option value="miu">MIU</option>
-</select><br><br>
 
-  
-  <input type="submit" value="Submit"  class="butt">
- </fieldset>
-</form>
     
 </body>
 </html>
